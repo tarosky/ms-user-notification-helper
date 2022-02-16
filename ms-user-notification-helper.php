@@ -72,8 +72,8 @@ function ms_user_notification_mail_hook( $attributes ) {
 			continue;
 		}
 		// From is admin_mail.
-		$mail_from = 'wordpress@' . wp_parse_url( network_home_url(), PHP_URL_HOST );
-		$mail_from = apply_filters( 'ms_user_notification_mail_default_from', $mail_from );
+		$mail_from       = 'wordpress@' . wp_parse_url( network_home_url(), PHP_URL_HOST );
+		$mail_from       = apply_filters( 'ms_user_notification_mail_default_from', $mail_from );
 		$headers[ $key ] = str_replace( "<{$mail}>", "<{$mail_from}>", $header );
 		break;
 	}
